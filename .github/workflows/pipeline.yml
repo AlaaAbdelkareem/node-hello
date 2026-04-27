@@ -63,14 +63,14 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: ../terraform
+        working-directory: ../terraform/
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: ./terraform
+        working-directory: ../terraform/
 
       - name: Terraform Apply
         # Only apply on pushes to master
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         run: terraform apply -auto-approve
-        working-directory: ./terraform  
+        working-directory: ../terraform/ 
