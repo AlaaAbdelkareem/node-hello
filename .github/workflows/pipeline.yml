@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build-and-test:
+  build Docker Image:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,7 @@ jobs:
       # STEP 1 LINTING
       - name: Install Dependencies
         run: npm install
+        run: npm install eslint
 
       - name: Run Linting
         run: npm run lint #|| echo "Linting failed, but moving to build for demo" 
