@@ -23,6 +23,8 @@ jobs:
       # STEP 1 LINTING
       - name: Install Dependencies
         run: npm install
+
+      - name: install Lint  
         run: npm install eslint
 
       - name: Run Linting
