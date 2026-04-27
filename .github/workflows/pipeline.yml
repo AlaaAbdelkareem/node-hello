@@ -24,8 +24,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: install Lint  
-        run: npm install eslint
+      # - name: install Lint  
+      #   run: npm install eslint
 
       - name: Run Linting
         run: npm run lint #|| echo "Linting failed, but moving to build for demo" 
