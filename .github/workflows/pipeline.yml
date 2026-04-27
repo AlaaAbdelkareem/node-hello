@@ -56,6 +56,10 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_wrapper: false # Recommended for cleaner logs in CI
+      - name: Check Folder Structure
+              run: |
+                pwd
+                ls -R
 
       - name: Terraform Init
         run: terraform init
