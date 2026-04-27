@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-  env:
-    TF_VAR_docker_username: ${{ secrets.DOCKER_USERNAME }}
-    TF_VAR_docker_password: ${{ secrets.DOCKER_PASSWORD }}
-
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
