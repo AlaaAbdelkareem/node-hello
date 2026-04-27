@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run Linting
-        run: npm run lint || echo "Linting failed, but moving to build for demo" 
+        run: npm run lint #|| echo "Linting failed, but moving to build for demo" 
 
       # STEP 2 DOCKER LOGIN
       - name: Log in to Docker Hub
