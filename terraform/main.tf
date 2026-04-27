@@ -7,7 +7,7 @@ resource "docker_image" "nawy_app" {
 
 # 2. Create and start the container
 resource "docker_container" "nawy_app_container" {
-  image = docker_image.nawy_app.id
+  image = docker_image.nawy_app.name
   name  = "nawy-production-container"
 
   ports {
