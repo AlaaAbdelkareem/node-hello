@@ -8,8 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm Install 
-RUN npm install newrelic --save
+RUN npm install && npm install newrelic --save
 
 # Copy the application source code
 COPY . .
