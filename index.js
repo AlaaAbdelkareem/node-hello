@@ -1,3 +1,5 @@
+require('newrelic'); 
+const express = require('express');
 const http = require('http');
 const port = process.env.PORT || 3000;
 

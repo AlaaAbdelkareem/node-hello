@@ -7,6 +7,9 @@
     "start": "node index.js",
     "lint": "echo 'No lint errors'"
   },
+  "dependencies": {
+    "newrelic": "^11.x.x" 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnpapa/node-hello.git"

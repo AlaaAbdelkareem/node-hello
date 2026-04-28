@@ -51,6 +51,7 @@ jobs:
     env:
       TF_VAR_docker_username: ${{ secrets.DOCKER_USERNAME }}
       TF_VAR_docker_password: ${{ secrets.DOCKER_PASSWORD }}
+      TF_VAR_new_relic_key: ${{ secrets.NEW_RELIC_LICENSE_KEY }}
 
     steps:
       - name: Checkout Code
