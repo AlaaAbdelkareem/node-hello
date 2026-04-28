@@ -8,6 +8,7 @@
     "lint": "echo 'No lint errors'"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "newrelic": "^11.x.x" 
   },
   "repository": {

@@ -9,13 +9,13 @@ resource "docker_image" "nawy_app" {
 resource "docker_container" "nawy_app_container" {
   image = docker_image.nawy_app.name
   name  = "nawy-production-container"
-  
+
   # Inject the New Relic configuration
   env = [
+    "NEW_RELIC_NO_CONFIG_FILE=true",
     "NEW_RELIC_LICENSE_KEY=${var.new_relic_key}",
-    "NEW_RELIC_APP_NAME=Nawy-Node-App",
-    "NEW_RELIC_LOGGING_ENABLED=true",
-    "NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true"
+    "NEW_RELIC_APP_NAME=Nawy-app",
+    "NEW_RELIC_LOG=stdout"
   ]
 
   ports {
